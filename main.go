@@ -10,6 +10,12 @@ func main (){
 	fmt.Println("The multiplication is:", a * b)
 	fmt.Println("The rest of the division is:", a % b)
 
+	a++
+    fmt.Println("Increase a", a)
+
+	if a > 0 && b > 0 {
+		fmt.Println("Positive numbers")
+	}
 
 
 }
