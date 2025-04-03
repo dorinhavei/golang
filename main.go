@@ -3,17 +3,8 @@ package main
 import "fmt" 
 
 func main (){
-	var user string
-	var password string
-
-	fmt.Print("Enter your username:")
-	fmt.Scan(&user)
-	fmt.Print("Type your password:")
-	fmt.Scan(&password) 
-
-	if user != "admin" && password != "1234" {
-	fmt.Println("Access denied") 
-    }else{
-	fmt.Println("Access allowed") 
-   }
+	var ages = [4]int{17,16,20,40}
+	names:= [4]string{"Olivia", "Isabel", "Rodrigo", "Liv"}
+    fmt.Println(ages)
+	fmt.Println(names)
 }
