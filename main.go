@@ -21,4 +21,33 @@ func main() {
    sort.Strings(names)
    fmt.Println(names)
    fmt.Println(sort.SearchStrings(names, "Olivia"))
+
+   x:=46
+
+   for x < 5 {
+	fmt.Println(x)
+	x++
+   }
+
+   for i:=0; i <5; i++{
+	fmt.Println("for 2:", i)
+   }
+
+   for i:=0; i <len(names); i++{
+	fmt.Println(names[i])
+   }
+
+   for index, value := range names{
+	fmt.Println("O índice é", index, "e o valor é", value)
+   }
+
+   for index, value:= range ages{
+	fmt.Println("O índice é", index, "e o valor é", value)
+   }
+
+   superhero:=[]string{"Spiderman", "Ironman", "Batman"}
+
+   for index, value := range superhero{
+	fmt.Println("The hero's number is:", index, "and his name is:", value)
+   }
 }
