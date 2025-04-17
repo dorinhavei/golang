@@ -3,51 +3,28 @@ package main
 import (
     "fmt"
 )
+func division(dividend int, divider int) (int, string){
+    if divider == 0 {
+    return 0, "error in dividion by 0"
+    }
+    return dividend / divider, ""
+}
+func basicOperation(a int, b int) (int, int, int){
+    sum := a + b
+    multiplication := a * b
+    subtraction := a - b
+    return sum, multiplication, subtraction
+}
 
 func main() {
-    var balance float32
-    fmt.Println("enter the initial value:")
-    fmt.Scan(&balance)
-    escolherOperacao(&balance)
-}
-
-func escolherOperacao(balance *float32) {
-    var option int
-    fmt.Println("Do you want to withdraw (1), deposit (2) or close the session (3)?")
-    fmt.Scan(&option)
-    switch option{ 
- 
-    case 1:
-        sacar(balance)
-    case 2:
-        depositar(balance)
-    case 3:
-        encerrar()
-    default:
-        fmt.Println("Invalid option")
-    }
-}
-
-func depositar(balance *float32) {
-    var value float32
-    fmt.Println("what amount do you want to deposit?")
-    fmt.Scan(&value)
-    *balance += value
-    fmt.Println("your current balance:", *balance)
-}
-
-func sacar(balance *float32) {
-    var value float32
-    fmt.Println("How much do you want to withdraw?")
-    fmt.Scan(&value)
-    if value > *balance {
-        fmt.Println("insufficient balance")
-    } else {
-        *balance -= value
-        fmt.Println("Syour current balance:", *balance)
-    }
-}
-
-func encerrar() {
-    fmt.Println("Session closed")
+ result, erro := division(10,2)
+ if erro != "No error" {
+    fmt.Println(erro)
+ } else {
+    fmt.Println("Result of division is:", result, erro)
+ }
+  sum, mult, sub := basicOperation(10,2)
+  fmt.Println(sum)
+  fmt.Println(mult)
+  fmt.Println(sub)
 }
