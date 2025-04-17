@@ -1,30 +1,27 @@
 package main
 
-import (
-    "fmt"
-)
-func division(dividend int, divider int) (int, string){
-    if divider == 0 {
-    return 0, "error in dividion by 0"
+import "fmt"
+
+// dadosPessoa recebe o nome e a idade de uma pessoa e retorna a mesma idade
+// e se ela é maior ou menor de idade.
+func dadosPessoa(nome string, idade int) (int, string) {
+    // Verifica se a idade é maior ou igual a 18
+    if idade >= 18 {
+        return idade, "Maior de idade"
     }
-    return dividend / divider, ""
-}
-func basicOperation(a int, b int) (int, int, int){
-    sum := a + b
-    multiplication := a * b
-    subtraction := a - b
-    return sum, multiplication, subtraction
+    return idade, "Menor de idade"
 }
 
 func main() {
- result, erro := division(10,2)
- if erro != "No error" {
-    fmt.Println(erro)
- } else {
-    fmt.Println("Result of division is:", result, erro)
- }
-  sum, mult, sub := basicOperation(10,2)
-  fmt.Println(sum)
-  fmt.Println(mult)
-  fmt.Println(sub)
+    // Exemplo de uso da função dadosPessoa
+    nome := "Olivia"
+    idade := 23
+
+    // Chama a função e recebe a idade e a classificação
+    idadeCalculada, classificacao := dadosPessoa(nome, idade)
+
+    // Exibe os resultados
+    fmt.Printf("Nome: %s\n", nome)
+    fmt.Printf("Idade: %d\n", idadeCalculada)
+    fmt.Println(classificacao)
 }
